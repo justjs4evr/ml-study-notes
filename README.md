@@ -36,8 +36,10 @@ My goal here is **fluency**. Rather than just copying code, I am rewriting pract
 
 Each chapter folder contains:
 
-1. **`practice_*.py`**: Implementations focusing on specific `sklearn` patterns (pipelines, transformers) or PyTorch training loops.
-2. **`notes.md`**: Key concepts, mathematical derivations, or API nuances I need to remember.
+1. **`practice*.py`**: Implementations focusing on specific `sklearn` patterns (pipelines, transformers) or PyTorch training loops.
+2. **'snip.py'**: Key concepts, mathematical derivations, or API nuances I need to remember.
+3. **'whole.py'**: the whole code used in the book, coded-alongside reading it
+
 
 | Chapter | Topic | Key Concepts / Patterns |
 | --- | --- | --- |
