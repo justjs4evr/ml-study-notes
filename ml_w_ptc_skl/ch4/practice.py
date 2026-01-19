@@ -1,3 +1,31 @@
+"""
+PRACTICE SESSION LEARNINGS SUMMARY(Mushroom Dataset):
+
+1. ONE-HOT ENCODING (OHE) vs LABEL ENCODING:
+   - Use OneHotEncoder for *Features* (X) to convert categories (Red, Blue) into binary columns (Is_Red, Is_Blue).
+     This prevents models from assuming a mathematical order (Red < Blue).
+   - Use LabelEncoder for *Targets* (y) to convert classes (Poisonous, Edible) into single numbers (1, 0).
+
+2. TROUBLESHOOTING SHAPE MISMATCHES:
+   - Error: "Shape of passed values is (8124, 95), indices imply (8124, 22)"
+   - Cause: Trying to force the original 22 column names onto the new 95 one-hot encoded columns.
+   - Fix: Use `encoder.get_feature_names_out()` to generate the correct list of new column headers.
+
+3. SKLEARN VERSION DIFFERENCES:
+   - Error: "unexpected keyword argument 'sparse_output'"
+   - Fix: In older Scikit-Learn versions (<1.2), use `sparse=False`. In newer versions, use `sparse_output=False`.
+
+4. DATA TYPE ERRORS:
+   - Error: "could not convert string to float: 'x'"
+   - Cause: Accidentally passing the raw text dataframe (X) into the model instead of the encoded dataframe (X_final).
+   - Fix: Always ensure `train_test_split` receives the processed/encoded variables.
+
+5. ARRAYS vs DATAFRAMES:
+   - Scikit-Learn models often warn if 'y' is a DataFrame column vector.
+   - Fix: Use `y.values.ravel()` to flatten it into a 1D array before training.
+"""
+
+
 # practice.py
 # Summary of Mushroom Dataset Classification (UCI ML Repo)
 # Covers: OneHotEncoding, LabelEncoding, Troubleshooting Version Errors, and RandomForest
