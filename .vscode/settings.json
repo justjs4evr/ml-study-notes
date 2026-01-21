@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./dlfb-clone/src"
+    ]
+}
