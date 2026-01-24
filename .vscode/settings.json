@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "./dlfb-clone/src"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
